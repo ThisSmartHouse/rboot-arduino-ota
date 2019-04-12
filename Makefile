@@ -1,6 +1,6 @@
 ARDUINO_PACKAGE_BASE = ~/.arduino15/packages/esp8266
-ARDUINO_ESP_VERSION = 2.3.0
-ARDUINO_TOOLS_BIN = $(ARDUINO_PACKAGE_BASE)/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/bin
+ARDUINO_ESP_VERSION = 2.5.0
+ARDUINO_TOOLS_BIN = $(ARDUINO_PACKAGE_BASE)/tools/xtensa-lx106-elf-gcc/2.5.0-3-20ed2b9/bin
 ESPTOOL2 = ../esptool2/esptool2
 
 SRCS = main.cpp rboot-bigflash.c rboot-api.c
@@ -38,10 +38,10 @@ ASMFLAGS = -D__ets__ -DICACHE_FLASH -U__STRICT_ANSI__ -c -g -x assembler-with-cp
 			-DARDUINO_ESP8266_NODEMCU -DARDUINO_ARCH_ESP8266 \
 			-DARDUINO_BOARD="ESP8266_NODEMCU" -DESP8266
 
-INCLUDES = $(ARDUINO_PACKAGE_BASE)/hardware/esp8266/2.3.0/tools/sdk/include \
-			$(ARDUINO_PACKAGE_BASE)/hardware/esp8266/2.3.0/tools/sdk/lwip/include \
-			$(ARDUINO_PACKAGE_BASE)/hardware/esp8266/2.3.0/cores/esp8266 \
-			$(ARDUINO_PACKAGE_BASE)/hardware/esp8266/2.3.0/variants/nodemcu
+INCLUDES = $(ARDUINO_PACKAGE_BASE)/hardware/esp8266/$(ARDUINO_ESP_VERSION)/tools/sdk/include \
+			$(ARDUINO_PACKAGE_BASE)/hardware/esp8266/$(ARDUINO_ESP_VERSION)/tools/sdk/lwip/include \
+			$(ARDUINO_PACKAGE_BASE)/hardware/esp8266/$(ARDUINO_ESP_VERSION)/cores/esp8266 \
+			$(ARDUINO_PACKAGE_BASE)/hardware/esp8266/$(ARDUINO_ESP_VERSION)/variants/nodemcu
 
 
 
